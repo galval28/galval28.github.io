@@ -1,7 +1,221 @@
-<!DOCTYPEhtml>
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags --><meta name="description" content=""><meta name="author" content="">
+	<link href="favicon.ico" rel="icon" />
+	<title>Lexi Reicks</title>
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.css" rel="stylesheet" />
+	<link href="css/style.css" rel="stylesheet" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" /><!-- Main Javascript --><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script><script src="js/main.js"></script><script src="js/animation.js"></script>
+</head>
 <body>
-<h1>Hello </h1>
-<p>I'm hosted with Github Pages. </p>
+<div class="site-wrapper">
+<section class="fullpage" id="home">
+<div class="titleblock">
+<h3 id="subtitle">Hi, I&#39;m</h3>
+
+<h1 id="title">Lexi Reicks</h1>
+
+<div id="card">
+<div class="front"><img class="img-thumbnail img-responsive" src="profile.jpg" /></div>
+
+<div class="back"><img class="img-thumbnail img-responsive" src="profile2.jpg" /></div>
+<script>$("#card").flip({
+          trigger:'hover'
+        })
+        </script></div>
+
+<h2 id="vertical"></h2>
+
+<nav class="main">
+<ul>
+	<li class="hvr-reveal"><a href="#about">About</a></li>
+	<li class="hvr-reveal"><a href="#work">Projects</a></li>
+	<li class="hvr-reveal"><a href="#contact">Skills</a></li>
+	<li class="hvr-reveal"><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</div>
+</section>
+
+<section class="fullpage" id="about">
+<div id="about-cover">
+<h1 class="title">About Me</h1>
+
+<nav class="page" id="about-nav">
+<ul>
+	<li class="hvr-reveal"><a href="#about">About</a></li>
+	<li class="hvr-reveal"><a href="#work">Projects</a></li>
+	<li class="hvr-reveal"><a href="#contact">Skills</a></li>
+	<li class="hvr-reveal"><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</div>
+
+<div id="about-data">
+<h3 id="data-title">I&#39;m Lexi Reicks, a full stack software developer at Thinix</h3>
+
+<div>
+<h3>Education</h3>
+
+<h4><strong>Iowa State University</strong></h4>
+
+<p>Bachelor of Science,  Engineering</p>
+
+<p>GPA: 3.2, Expected graduation May 2020</p>
+</div>
+
+<div>
+<h3>Work Experience</h3>
+
+<p>After taking electrical technology and mechanical technology during high school at a local college, I knew that I wanted to persue a degree in engineering. I took an internship class in high school which allowed me to shadow an IT technician. It was mostly running virus software and changing screens, but occasionally we would be able to work with companies to fix server issues or in one case write an application for taking inventory. This tuned my engineering focus to Software Engineering. I started working at Thinix in May of 2017 as a full stack web developer. I have been mostly working to convert our Angularjs application to Angular 2.0/4.0. As well as fulling implementing new features and fixing bugs. I am currently looking for an internship or co-op in front-end or full stack web developement.</p>
+
+<h2></h2>
+</div>
+
+<div>
+<h3>Free Time</h3>
+
+<p>When I&#39;m not working or studying, I am usually hanging out with friends or family, playing OSRS, or working on projects. I have been trying to get more involved in the college atmosphere by attending hackatons and starting this year, participating in Critical Tinkers. Critical Tinkers is a project based club for engineering students. I am working to find a team and a fun new project!</p>
+</div>
+
+<div class="facts-list">
+<h3>Lightning Facts</h3>
+
+<ul>
+	<li><strong>Favorite part about programming: </strong> Short answer: Data structures. Long answer: Determining the best way to structure data gives me a rush. I am constantly looking for newer, more efficient ways to store, retrieve, and sort data. At work I developed a timeline of connection states, finally finding a good use for a hash map. At first the key to the map was just an id that mapped to which month of data we needed. This way we could only get a months worth of states from the server at a time and allow caching. Then I went even further to make the map a tuple. Now the key, which is the timeline you want, is mapped to the other map with the states. It was really fun to think up.</li>
+	<li><strong>OSRS total level: </strong>1637</li>
+	<li><strong>Favorite programming language: </strong>Angular2. Easy to follow, great documentation, easy to test, get to use typescript!</li>
+	<!-- <li><strong>Greatest programming problem and how I solved it: </strong>
+              Working at Thinix and 
+            </li> -->
+	<li><strong>Dream job and why:&nbsp;</strong>Full stack software development job that allows me to either live somewhere where I would like to live or allow me travel. Working on cutting edge technologies would be a perk, I want to be using my creativity and work ethic to develop&nbsp;the technologies of tomorrow.</li>
+	<li><strong>Favorite card game: </strong>Magic the Gathering</li>
+	<li><strong>Favorite class:&nbsp;</strong>Currently I am in a project class that teaches us how to build a full scale application from scratch. Our team has decided to make a schedule application focused at students. This will allow students to join the same classes/study groups/clubs&nbsp;on their calendars making it easier to keep a handle on our busy schedules.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="fullpage" id="work">
+<div id="projects-content">
+<h1>Projects</h1>
+
+<h2><a href="http://upickmovies.com">uPick</a></h2>
+
+<p>My largest and ongoing project is a web application that helps you find a movie to watch. You can select a completely random movie, or tailor the selection more to your tastes. Currently, the only filters are for genre, date range, and rating. I am working to develop a feature that will allow you to pick three movies and it will find movies similar to those to help narrow down the search. Next, I will work on a feature that will let the user know where they can watch the movie they selected.</p>
+
+<h2><a href="https://istatus.com">iStatus</a></h2>
+
+<p>iStatus is a part of Thinix that deals with monitoring Wifi connections, alerting you if something isn&#39;t working correctly, and we provide RocketFailover backup connections so your company will never go down. At Thinix I have been redeveloping our angularjs application into angular2/4 trying to be mindful of best practices and testability.</p>
+
+<h2>Webpage and Blog</h2>
+
+<p>Although I am not much of a designer, I believe that it is benefitial to learn the html and css needed to create a decent looking website. I tried to make this personal website project fun by also making a blog in php and keeping track of my work. Using my php blog, I can write a new post in a modal, save the post to my database, and have it post dynamically to my blog. I can also edit and delete blog posts, trying to familiarize myself further with the RESTful architecture..</p>
+
+<h2>Future...</h2>
+
+<p>Looking forward, I would like to start working on a kind of social media for college students looking for projects. I know that I am always looking for people that have the drive to work on projects with outside of class. I also believe that it can really showcase what companies are looking for in employees.</p>
+
+<ol>
+	<li>Experience. So many companies are looking for college students with experience, and it can be difficult in college to get that experience. I believe that this program could make that easier.</li>
+	<li>Passion. As a college student, it can be difficult to find time to work on personal projects. I think that one of the reasons is that its also hard to find a project that you want to spend your time on. With this program, the goal is that anyone can find a project that interests them, and people to share the work with.</li>
+	<li>Collaboration. One thing that I have found, is that the computer/software engineering field has become very competitive. It&#39;s not enough to just be good at programming anymore, you also need to be able to work closely with others. My program would make it easy for anyone who wants to work on collaborative projects, have that opportunity.</li>
+</ol>
+
+<p>My hope for this project is to get people involved firstly in the making of the project, second in the use of the program farther down the road. I believe that this project could give companies an insight into what students are actually working on besides course work and show that they are able to work in groups. Currently, this is just an idea, but I hope that I can have this project running by the end of this semester.</p>
+</div>
+
+<div id="projects-cover">
+<h1 class="title">Projects</h1>
+
+<nav class="page" id="work-nav">
+<ul>
+	<li class="hvr-reveal"><a href="#about">About</a></li>
+	<li class="hvr-reveal"><a href="#work">Projects</a></li>
+	<li class="hvr-reveal"><a href="#contact">Skills</a></li>
+	<li class="hvr-reveal"><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</div>
+</section>
+
+<section class="fullpage fluid-container" id="contact">
+<div id="contact-cover">
+<h1 class="skills-title">Skills</h1>
+
+<div class="skills">
+<div class="wrapper">
+<div class="pro">
+<h4>Pro</h4>
+
+<ul>
+	<li class="hvr-reveal">Angular2</li>
+	<li class="hvr-reveal">Angularjs</li>
+	<li class="hvr-reveal">OSRS</li>
+	<li class="hvr-reveal">Javascript/Typescript</li>
+	<li class="hvr-reveal">HTML</li>
+</ul>
+</div>
+
+<div class="newbie">
+<h4>Comfortable</h4>
+
+<ul>
+	<li class="hvr-reveal">SQL</li>
+	<li class="hvr-reveal">Java</li>
+	<li class="hvr-reveal">CSS</li>
+	<li class="hvr-reveal">C#</li>
+	<li class="hvr-reveal">ASP.NET</li>
+</ul>
+</div>
+
+<div class="future">
+<h4>Newbie</h4>
+
+<ul>
+	<li class="hvr-reveal">C</li>
+	<li class="hvr-reveal">PLC Programming</li>
+	<li class="hvr-reveal">jQuery</li>
+	<li class="hvr-reveal">Python</li>
+	<li class="hvr-reveal">Ruby</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class="row" id="contact-data">
+<div class="contact">
+<div class="info">
+<h2 id="contact-title">Contact</h2>
+
+<h3>Lexi Reicks</h3>
+
+<p id="email"><a href="mailto:lmreicks@iastate.edu">lmreicks@iastate.edu</a></p>
+</div>
+</div>
+
+<div class="contact-right">
+<div>
+<p>I can be easily contacted at the email given. You can also reach me on any of these social media sites.</p>
+</div>
+
+<div></div>
+
+<div>
+<nav class="page" id="contact-nav">
+<ul>
+	<li class="hvr-reveal"><a href="#about">About</a></li>
+	<li class="hvr-reveal"><a href="#work">Projects</a></li>
+	<li class="hvr-reveal"><a href="blog">Blog</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</section>
+</div>
 </body>
 </html>

@@ -1,221 +1,468 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags --><meta name="description" content=""><meta name="author" content="">
-	<link href="favicon.ico" rel="icon" />
-	<title>Lexi Reicks</title>
-	<!-- Bootstrap core CSS -->
-	<link href="css/bootstrap.css" rel="stylesheet" />
-	<link href="css/style.css" rel="stylesheet" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" /><!-- Main Javascript --><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script><script src="js/main.js"></script><script src="js/animation.js"></script>
+<head>
+  <!-- Theme Made with help from www.w3schools.com - No Copyright -->
+  <title>Valery Smith</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Bootstrap core-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+
+   <link rel="icon" href="https://cdn0.iconfinder.com/data/icons/cupcakes/48/rainbow_cupcake.png">
+  <style>
+  body {
+      font: 400 15px/1.8 Lato, sans-serif;
+      color: #22aaaa;
+  }
+  h3, h4 {
+     /* margin: 10px 0 30px 0; */
+      /*letter-spacing: 10px;*/      
+      font-size: 20px;
+      /*color: #111;*/
+  }
+  .container {
+      padding: 80px 120px;
+  }
+  .person {
+      border: 10px solid transparent;
+      margin-bottom: 25px;
+      width: 80%;
+      height: 80%;
+      opacity: 0.7;
+  }
+  .person:hover {
+      border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+      -webkit-filter: grayscale(90%);
+      filter: grayscale(90%); /* make all photos black and white */ 
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+  }
+  .carousel-caption h3 {
+      color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+      background: #2d2d30;
+      color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail p {
+      margin-top: 15px;
+      color: #555;
+  }
+  .btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #f1f1f1;
+      border-radius: 0;
+      transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+      border: 1px solid #333;
+      background-color: #fff;
+      color: #000;
+  }
+  .modal-header, h4, .close {
+      background-color: #333;
+      color: #fff !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-header, .modal-body {
+      padding: 40px 50px;
+  }
+  .nav-tabs li a {
+      color: #777;
+  }
+  #googleMap {
+      width: 100%;
+      height: 400px;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+  }  
+  .navbar {
+      font-family: Montserrat, sans-serif;
+      margin-bottom: 0;
+      background-color: #2d2d30;
+      border: 0;
+      font-size: 11px !important;
+      letter-spacing: 4px;
+      opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+      color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+      color: #fff !important;
+  }
+  .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+  }
+  .open .dropdown-toggle {
+      color: #fff;
+      background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+      color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+      background-color: red !important;
+  }
+  footer {
+      background-color: #2d2d30;
+      color: #f5f5f5;
+      padding: 32px;
+  }
+  footer a {
+      color: #f5f5f5;
+  }
+  footer a:hover {
+      color: #777;
+      text-decoration: none;
+  }  
+  .form-control {
+      border-radius: 0;
+  }
+  textarea {
+      resize: none;
+  }
+  </style>
 </head>
-<body>
-<div class="site-wrapper">
-<section class="fullpage" id="home">
-<div class="titleblock">
-<h3 id="subtitle">Hi, I&#39;m</h3>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 
-<h1 id="title">Lexi Reicks</h1>
-
-<div id="card">
-<div class="front"><img class="img-thumbnail img-responsive" src="profile.jpg" /></div>
-
-<div class="back"><img class="img-thumbnail img-responsive" src="profile2.jpg" /></div>
-<script>$("#card").flip({
-          trigger:'hover'
-        })
-        </script></div>
-
-<h2 id="vertical"></h2>
-
-<nav class="main">
-<ul>
-	<li class="hvr-reveal"><a href="#about">About</a></li>
-	<li class="hvr-reveal"><a href="#work">Projects</a></li>
-	<li class="hvr-reveal"><a href="#contact">Skills</a></li>
-	<li class="hvr-reveal"><a href="#contact">Contact</a></li>
-</ul>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">VaS</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#myCarousel">Home</a></li>
+        <li><a href="#Projects">Projects</a></li>
+        <li><a href="#AboutMe">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
 </nav>
-</div>
-</section>
 
-<section class="fullpage" id="about">
-<div id="about-cover">
-<h1 class="title">About Me</h1>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
 
-<nav class="page" id="about-nav">
-<ul>
-	<li class="hvr-reveal"><a href="#about">About</a></li>
-	<li class="hvr-reveal"><a href="#work">Projects</a></li>
-	<li class="hvr-reveal"><a href="#contact">Skills</a></li>
-	<li class="hvr-reveal"><a href="#contact">Contact</a></li>
-</ul>
-</nav>
-</div>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="https://res.cloudinary.com/devpost/image/fetch/s--pa3D-d6f--/http://stevenw.duckdns.org/Sites/Projects/Shoebotics/ShoeboticsMedia/final.jpg" alt="Shoebotics" width="203" height="114">
+        <div class="carousel-caption">
+          <h3>Shoebotics</h3>
+          <p>Award-winning HackISU spring 2017 project: a cargo carrying robot</p>
+        </div>      
+      </div>
 
-<div id="about-data">
-<h3 id="data-title">I&#39;m Lexi Reicks, a full stack software developer at Thinix</h3>
+      <div class="item">
+        <img src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/000/533/720/datas/gallery.jpg" alt="Illumicycle" width="203" height="114">
+        <div class="carousel-caption">
+          <h3>Illumicycle </h3>
+          <p> an award winning Hack UIowa project: inexpensive automatic bike light</p>
+        </div>      
+      </div>
+    
+      <div class="item">
+        <img src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/000/555/280/datas/gallery.jpg" alt="DirectoBand" width="203" height="114">
+        <div class="carousel-caption">
+          <h3>Directoband </h3>
+          <p>JHackISU fall 2017 project: an armband that gives directions heptically</p>
+        </div>      
+      </div>
+    </div>
 
-<div>
-<h3>Education</h3>
-
-<h4><strong>Iowa State University</strong></h4>
-
-<p>Bachelor of Science,  Engineering</p>
-
-<p>GPA: 3.2, Expected graduation May 2020</p>
-</div>
-
-<div>
-<h3>Work Experience</h3>
-
-<p>After taking electrical technology and mechanical technology during high school at a local college, I knew that I wanted to persue a degree in engineering. I took an internship class in high school which allowed me to shadow an IT technician. It was mostly running virus software and changing screens, but occasionally we would be able to work with companies to fix server issues or in one case write an application for taking inventory. This tuned my engineering focus to Software Engineering. I started working at Thinix in May of 2017 as a full stack web developer. I have been mostly working to convert our Angularjs application to Angular 2.0/4.0. As well as fulling implementing new features and fixing bugs. I am currently looking for an internship or co-op in front-end or full stack web developement.</p>
-
-<h2></h2>
-</div>
-
-<div>
-<h3>Free Time</h3>
-
-<p>When I&#39;m not working or studying, I am usually hanging out with friends or family, playing OSRS, or working on projects. I have been trying to get more involved in the college atmosphere by attending hackatons and starting this year, participating in Critical Tinkers. Critical Tinkers is a project based club for engineering students. I am working to find a team and a fun new project!</p>
-</div>
-
-<div class="facts-list">
-<h3>Lightning Facts</h3>
-
-<ul>
-	<li><strong>Favorite part about programming: </strong> Short answer: Data structures. Long answer: Determining the best way to structure data gives me a rush. I am constantly looking for newer, more efficient ways to store, retrieve, and sort data. At work I developed a timeline of connection states, finally finding a good use for a hash map. At first the key to the map was just an id that mapped to which month of data we needed. This way we could only get a months worth of states from the server at a time and allow caching. Then I went even further to make the map a tuple. Now the key, which is the timeline you want, is mapped to the other map with the states. It was really fun to think up.</li>
-	<li><strong>OSRS total level: </strong>1637</li>
-	<li><strong>Favorite programming language: </strong>Angular2. Easy to follow, great documentation, easy to test, get to use typescript!</li>
-	<!-- <li><strong>Greatest programming problem and how I solved it: </strong>
-              Working at Thinix and 
-            </li> -->
-	<li><strong>Dream job and why:&nbsp;</strong>Full stack software development job that allows me to either live somewhere where I would like to live or allow me travel. Working on cutting edge technologies would be a perk, I want to be using my creativity and work ethic to develop&nbsp;the technologies of tomorrow.</li>
-	<li><strong>Favorite card game: </strong>Magic the Gathering</li>
-	<li><strong>Favorite class:&nbsp;</strong>Currently I am in a project class that teaches us how to build a full scale application from scratch. Our team has decided to make a schedule application focused at students. This will allow students to join the same classes/study groups/clubs&nbsp;on their calendars making it easier to keep a handle on our busy schedules.</li>
-</ul>
-</div>
-</div>
-</section>
-
-<section class="fullpage" id="work">
-<div id="projects-content">
-<h1>Projects</h1>
-
-<h2><a href="http://upickmovies.com">uPick</a></h2>
-
-<p>My largest and ongoing project is a web application that helps you find a movie to watch. You can select a completely random movie, or tailor the selection more to your tastes. Currently, the only filters are for genre, date range, and rating. I am working to develop a feature that will allow you to pick three movies and it will find movies similar to those to help narrow down the search. Next, I will work on a feature that will let the user know where they can watch the movie they selected.</p>
-
-<h2><a href="https://istatus.com">iStatus</a></h2>
-
-<p>iStatus is a part of Thinix that deals with monitoring Wifi connections, alerting you if something isn&#39;t working correctly, and we provide RocketFailover backup connections so your company will never go down. At Thinix I have been redeveloping our angularjs application into angular2/4 trying to be mindful of best practices and testability.</p>
-
-<h2>Webpage and Blog</h2>
-
-<p>Although I am not much of a designer, I believe that it is benefitial to learn the html and css needed to create a decent looking website. I tried to make this personal website project fun by also making a blog in php and keeping track of my work. Using my php blog, I can write a new post in a modal, save the post to my database, and have it post dynamically to my blog. I can also edit and delete blog posts, trying to familiarize myself further with the RESTful architecture..</p>
-
-<h2>Future...</h2>
-
-<p>Looking forward, I would like to start working on a kind of social media for college students looking for projects. I know that I am always looking for people that have the drive to work on projects with outside of class. I also believe that it can really showcase what companies are looking for in employees.</p>
-
-<ol>
-	<li>Experience. So many companies are looking for college students with experience, and it can be difficult in college to get that experience. I believe that this program could make that easier.</li>
-	<li>Passion. As a college student, it can be difficult to find time to work on personal projects. I think that one of the reasons is that its also hard to find a project that you want to spend your time on. With this program, the goal is that anyone can find a project that interests them, and people to share the work with.</li>
-	<li>Collaboration. One thing that I have found, is that the computer/software engineering field has become very competitive. It&#39;s not enough to just be good at programming anymore, you also need to be able to work closely with others. My program would make it easy for anyone who wants to work on collaborative projects, have that opportunity.</li>
-</ol>
-
-<p>My hope for this project is to get people involved firstly in the making of the project, second in the use of the program farther down the road. I believe that this project could give companies an insight into what students are actually working on besides course work and show that they are able to work in groups. Currently, this is just an idea, but I hope that I can have this project running by the end of this semester.</p>
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
 </div>
 
-<div id="projects-cover">
-<h1 class="title">Projects</h1>
+<!-- Container (The Band Section) -->
+<div id="AboutMe" class="container text-center">
+<div class="row">
+<div class="col-sm-4" style="background-color:lavenderblush;">
+    <p>
+        <center>
+           <a href="#AboutMe" data-toggle="collapse">
+        <img src="nerd.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo" class="collapse">
+        <p>a picure of me</p>
+        <p>details: none</p>
+        <p>date taken: 2015</p>
+      </div> 
+        </p>
+        <p>
+               <a href="#demo2" data-toggle="collapse">
+        <img src="dreamteam.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo2" class="collapse">
+        <p>A piciture of my team and I at HackISU spring 2017</p>
+        <p>This picture was taken durrign the awards ceremony at which we won the prize for most comercialability potential for our project Shoebotics</p>
+        <p>feb 2017</p>
+      </div>
+      </p>
+      <p>
+          <a href="#demo3" data-toggle="collapse">
+        <img src="valeryy.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo3" class="collapse">
+         <p>a picture of me</p>
+        <p>details: none</p>
+        <p>date taken: 2015</p>
+      </div>
+      </p>
+    </div>
+    <div class="col-sm-8" style="background-color:lavender;">    
+  <h2>About Valery</h2>
+  <p><em>An Electrical Enginering student at Iowa State University in Ames, IA</em></p>
+  <p>Bachelor of Science, Electrical Enginering  </p>
+  <p> GPA: 3.2 Expected Graduation: May 2020 </p>
+  <h3> Work Experince </h3>
+  
+  <p align="left"> I am currently a teaching assistant for EE 285 C programming and problem solving. 
+    Last summer I had the pleasure of an automation internship with AES in Cedar Rapids. This has given me experince 
+    working with Programable logic controlers and Human Machine Interface. Previously, I have tutored calculus and taught swim lessons for both the City of Idaho Falls and Ames.
+    I continue my love of teaching by frequently volunteering in local STEM outreach programs including Cedar Rapids's Coder Dojo.  
+      
+      <h3><center> Clubs and Activities</center> </h3>
+      <p align="left">
+          I curently hold the position of President in the Critical Tinkers club at Iowa State. The club has an emphasis on critical thinking, as well as 
+          provides members with access to resources and other team members for pursuing personal projects. </p>
+           <p align="left">
+               I am the former secretary of the Writers's Guild at Iowa State. As the secretary I was responsible for sending the weekly
+               club email, asiting in planing club meetings, planning events and asisted in pbulishing the guild anthology. I have been published in the
+               2016 edition of the guild's anthology as well as the 2017 edition. 
+          </p>
+           <p align="left">
+               I am a member of the Cyclone Swing Society and regularly attend swing dancing lessons and dances.
+               </p>
+                <p align="left">
+                    Within the Cyclone Hockey Pep-band I play flute and use what breath I have left to cheer on the team.
+                    </p>
+      <h3><center> Free Time and Non-Engineering Projects </center> </h3>
+      <left>
+      In additon to being published in the Writers's Guild of Iowa State's anthologies, I am also published in several of Z publishing house's anthologies.
+      I have a short story in <b> All at Once I Saw my colors. </b> <left><p> <img src="colors.jpg" align = "center"; alt="book image" width="155" height="200"></p>
+      <left>
+      As well as sever short stories and poems in <b> Dream of a World Waking Up </left></b><p> <img src="dream.jpg"  alt="book image" width="150" height="200"></p>
+      <left>Recently I have done the cover design and part of the publishing for The 2017
+ edition of the Writer's Guild at ISU anthology. </left><p> <img src="bookCover.jpg"  alt="book cover" width="150" height="200"> </left> </p>      
 
-<nav class="page" id="work-nav">
-<ul>
-	<li class="hvr-reveal"><a href="#about">About</a></li>
-	<li class="hvr-reveal"><a href="#work">Projects</a></li>
-	<li class="hvr-reveal"><a href="#contact">Skills</a></li>
-	<li class="hvr-reveal"><a href="#contact">Contact</a></li>
-</ul>
-</nav>
 </div>
-</section>
-
-<section class="fullpage fluid-container" id="contact">
-<div id="contact-cover">
-<h1 class="skills-title">Skills</h1>
-
-<div class="skills">
-<div class="wrapper">
-<div class="pro">
-<h4>Pro</h4>
-
-<ul>
-	<li class="hvr-reveal">Angular2</li>
-	<li class="hvr-reveal">Angularjs</li>
-	<li class="hvr-reveal">OSRS</li>
-	<li class="hvr-reveal">Javascript/Typescript</li>
-	<li class="hvr-reveal">HTML</li>
-</ul>
+ 
+ 
+    
+  </div>
 </div>
 
-<div class="newbie">
-<h4>Comfortable</h4>
+<!-- Container (TOUR Section) -->
+<div id="skills" class="bg-1">
+  <div class="container">
+    <h3 class="text-center"><center>Skills</h3>
+    
+ 
+    
+    <div class="row">
+  <div class="col-sm-4"><center><h3> Comfortable
+      </h3> <p> circuit design</p>
+      <p> C, C++</p>
+      <p> Python </p>
+      <p> writting </p> </div>
+  <div class="col-sm-4"><h3><center>Noob</h3><p>html</p> <p> android development </p> 
+<p> java </p>  </div>
+  <div class="col-sm-4"><h3><center>Future</h3>
+  <p>FPGA</p>
+  <p>upper embedded systems</div>
+  <p> PLCs</p>
+  </center>
+</div>
+    </div>
+  </div>
+  
+ 
 
-<ul>
-	<li class="hvr-reveal">SQL</li>
-	<li class="hvr-reveal">Java</li>
-	<li class="hvr-reveal">CSS</li>
-	<li class="hvr-reveal">C#</li>
-	<li class="hvr-reveal">ASP.NET</li>
-</ul>
+<!-- Container (Contact Section) -->
+<div id="contact" class="container">
+  <h3 class="text-center">Contact</h3>
+ 
+  <div class="row">
+    <div class="col-md-4">
+     
+      <p><span class="glyphicon glyphicon-cat"></span><a href="https://github.com/galval28"> My Github </a>
+       <p><a href="https://www.linkedin.com/in/valery-smith-b99170108/">My LinkedIn</a></p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: <a href="mailto:spanda8@iastate.edu "id="email"> spanda8@iastate.edu</a></p>
+     </div>
+    
+    
+  </div>
+  <br>
+  <h3 class="text-center">Projects</h3>  
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#Projects">The Apocolapse</a></li>
+    <li><a data-toggle="tab" href="#menu1">Aduino Music maker</a></li>
+    <li><a data-toggle="tab" href="#menu2">TV monitor</a></li>
+    <li><a data-toggle="tab" href="#menu3">Arduino Alarm clock</a></li>
+    <li><a data-toggle="tab" href="#menu4">Magic Mirror</a></li>
+    <li><a data-toggle="tab" href="#menu5">The beepBeep</a></li>
+    <li><a data-toggle="tab" href="#menu6">Shoebotics</a></li>
+    
+  </ul>
+
+  <div class="tab-content">
+    <div id="Projects" class="tab-pane fade in active">
+      <h2>The Apocolapse</h2>
+      <p>The Apocolapse is a handheld gaming device my team and I developed at HackISU fall 2016. It uses right and left pushbuttons as well a 16x2 screen for the UI. It's powered by a mobile power bank attached to the arduino 101
+           mircocontroler and sotored within the box. The system displays a pre-programed question on the screen and the user answers either yes or no using the button lableded so. The screen then displays a win or loss message
+           depending on if the user pressed the right button, if the user won, the system also vibrates using a vibration motor taken from an old phone.
+            Here is the <a href="https://devpost.com/software/the-apocolypse">link to the devpost.</a>
+           I have since up graded the project to store how many times the user has one or lost as well have some questions where the answer is no, as oposed to yes. 
+           <p><a href="https://github.com/galval28/TheApocolapse"> here is the Git repo with arduino code</a></p> </p>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h2>Arduino Music</h2>
+      <p>I made this porject over winter break '16-'17. The arduino takes the voltage across a potentiometer and maps it
+          to one of five pitch set notes (F-Bflat) which is played though a buzzer. The arduino also reads another input that serves
+          as an on/off function for the music player(not the arduino). There is a 'flip' switch that changes whether the monetary switch 
+          generates a note or rest. I will upload pictures later. I plan on expanding this project to be able to save songs to an sd card, as well as 
+          play pre-programed songs as read from the sd card. The user would use an LCD screen to see which song they are selecting.
+          <p><a href="https://github.com/galval28/arduino-music-player"> here is the Git repo with arduino code</a></p>
+           </p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h2>TV monitor</h2>
+      <p>The arduino based TV monitor was also made over winter break '16-'17. The arduino program simply records how long the Arduino is on for to the SD card that is 
+          attached to the arduino. When the Arduino is attached via USB to a TV (wih a usb port) the TV powers the arduino, making it so the arduino is only on when the TV is on,
+          therefore recoding how long the TV is on for. Challenges with this project include: developing a method to update the value stored in the text file on the Sd card 
+          thus avoiding long text files witth a tally set for each minute, as well as determining whether to have the values roll over from diferent TV watching sessions. I also had an issue
+          in retriveing the data from the SD card as it would come back in the wrong data type. 
+          <p><a href="https://github.com/galval28/TV-monitor"> here is the Git repo with arduino code</a></p>
+          
+      </p>
+    </div>
+    <div id="menu3" class="tab-pane fade">
+      <h2>Arduino Alarm clock</h2>
+      <p>I created this project for my ee285 C programing class. I chose this project because I use my phone
+          currently as an alamr clock, and ocasionally this causes issue when my phone dies in the middle of the night.
+          It displays the time on a 16x2 LCD screen. The user is able to set the time and the alarm time using switches
+          and a switch that toggles between the alarm being set and the time being set. If the current time and the alarm set time match
+          the buzzer beeps for a set duration. I ran into issue powering it as there is not enough power from the arduino for both the 
+          screen and the buzzer causing the screen to go a little funky.
+          <p><a href="https://github.com/galval28/arduino-alarm-clock"> here is the Git repo with arduino code</a></p>
+      </p>
+    </div>
+    <div id="menu4" class="tab-pane fade">
+      <h2>Magic Mirror</h2>
+      <p>IMagicMirror is a project that a team within the Critical Tinkers club that I on is working on. We are using a one-way mirror, LCD scree, raspberry pi and camera (magic mirror) as device to develop emotional recogntion with. This is mostly done in Python. </p>
+    </div>
+    <div id="menu5" class="tab-pane fade">
+      <h2>the beepBeep</h2>
+      <p>I mean, sometimes I enjoy the show, but other times I enjoy other things.</p>
+    </div>
+    <div id="menu6" class="tab-pane fade">
+      <h2>Shoebotics</h2>
+      <p>I mean, sometimes I enjoy the show, but other times I enjoy other things.</p>
+    </div>
+  </div>
 </div>
 
-<div class="future">
-<h4>Newbie</h4>
 
-<ul>
-	<li class="hvr-reveal">C</li>
-	<li class="hvr-reveal">PLC Programming</li>
-	<li class="hvr-reveal">jQuery</li>
-	<li class="hvr-reveal">Python</li>
-	<li class="hvr-reveal">Ruby</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
 
-<div class="row" id="contact-data">
-<div class="contact">
-<div class="info">
-<h2 id="contact-title">Contact</h2>
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>Bootstrap Theme Made with help from <a href="https://www.w3schools.com" data-toggle="tooltip" title="Visit w3schools">www.w3schools.com</a></p> 
+</footer>
 
-<h3>Lexi Reicks</h3>
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
 
-<p id="email"><a href="mailto:lmreicks@iastate.edu">lmreicks@iastate.edu</a></p>
-</div>
-</div>
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
 
-<div class="contact-right">
-<div>
-<p>I can be easily contacted at the email given. You can also reach me on any of these social media sites.</p>
-</div>
+      // Prevent default anchor click behavior
+      event.preventDefault();
 
-<div></div>
+      // Store hash
+      var hash = this.hash;
 
-<div>
-<nav class="page" id="contact-nav">
-<ul>
-	<li class="hvr-reveal"><a href="#about">About</a></li>
-	<li class="hvr-reveal"><a href="#work">Projects</a></li>
-	<li class="hvr-reveal"><a href="blog">Blog</a></li>
-</ul>
-</nav>
-</div>
-</div>
-</div>
-</section>
-</div>
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
 </body>
 </html>
